@@ -1,10 +1,13 @@
-on: pull_request
+on: [pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     name: WebPageTest Action
-    steps:        
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
       - name: WebPageTest
         uses: WPO-Foundation/webpagetest-github-action@main
         with:
@@ -12,3 +15,4 @@ jobs:
           urls: |
             https://adventures.polaris.com
           label: 'GitHub Action Test'
+          budget: 'wpt-budget.json'
