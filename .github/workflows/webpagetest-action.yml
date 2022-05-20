@@ -1,0 +1,17 @@
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: WebPageTest Action
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: WebPageTest
+        uses: WPO-Foundation/webpagetest-github-action@main
+        with:
+          apiKey: 0ca1f42e-87bd-4bde-9dee-c8416ddb7ac4
+          urls: |
+            https://adventures.polaris.com
+          label: 'GitHub Action Test'
