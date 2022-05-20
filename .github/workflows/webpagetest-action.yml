@@ -4,10 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: WebPageTest Action
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        
+    steps:        
       - name: WebPageTest
         uses: WPO-Foundation/webpagetest-github-action@main
         with:
