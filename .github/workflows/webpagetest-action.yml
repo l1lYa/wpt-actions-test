@@ -11,8 +11,9 @@ jobs:
       - name: WebPageTest
         uses: WPO-Foundation/webpagetest-github-action@main
         with:
-          apiKey: 0ca1f42e-87bd-4bde-9dee-c8416ddb7ac4
+          apiKey: ${{ secrets.WPT_API_KEY }}
           urls: |
             https://adventures.polaris.com
           label: 'GitHub Action Test'
           budget: 'wpt-budget.json'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
