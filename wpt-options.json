@@ -1,6 +1,6 @@
 {
     "runs": 1,
-    "location": "Virginia:Chrome",
+    "location": "LosAngeles:Chrome",
     "connectivity": "Cable",
     "blockAds": true
 }
