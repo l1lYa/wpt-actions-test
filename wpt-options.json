@@ -1,6 +1,6 @@
 {
     "runs": 1,
-    "location": "LosAngeles_M1MacMini:Chrome",
-    "connectivity": "Cable",
+    "location": "ec2-us-east-1:Firefox",
+    "connectivity": "DSL",
     "blockAds": true
 }
