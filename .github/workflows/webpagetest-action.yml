@@ -19,4 +19,5 @@ jobs:
             https://adventures:polaris@adventures.polaris-test.run/search?locations=Minnesota,%20United%20States
           label: 'GitHub Action Test'
           budget: 'wpt-budget.json'
+          wptOptions: 'wpt-options.json'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
