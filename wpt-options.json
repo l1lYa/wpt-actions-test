@@ -1,6 +1,6 @@
 {
     "runs": 1,
     "location": "ec2-us-east-1:Firefox",
-    "connectivity": "DSL",
+    "connectivity": "Cable",
     "blockAds": true
 }
