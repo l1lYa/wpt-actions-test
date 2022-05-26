@@ -4,11 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: WebPageTest Action
-    steps:
-      - name: Sleep for 30 seconds
-        run: sleep 30s
-        shell: bash
-    
+    steps:    
       - name: Checkout
         uses: actions/checkout@v2
         
@@ -19,5 +15,4 @@ jobs:
           urls: |
             https://adventures:polaris@adventures.polaris-dev.com/
           label: 'GitHub Action Test'
-          budget: 'wpt-budget.json'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
