@@ -3,7 +3,7 @@ on: [pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: WebPageTest Action
+    name: WPT Action (TEST)
     steps:    
       - name: Checkout
         uses: actions/checkout@v2
@@ -13,6 +13,9 @@ jobs:
         with:
           apiKey: ${{ secrets.WPT_API_KEY }}
           urls: |
-            https://adventures:polaris@adventures.polaris-dev.com/
+            https://adventures:polaris@adventures.polaris-test.run/
+            https://adventures:polaris@adventures.polaris-test.run/our-outfitters/amk-adventures-outfitters/
+            https://adventures:polaris@adventures.polaris-test.run/adventure/indysnowexp/
+            https://adventures:polaris@adventures.polaris-test.run/search?locations=Minnesota,%20United%20States
           label: 'GitHub Action Test'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
