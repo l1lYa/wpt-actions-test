@@ -5,6 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     name: WebPageTest Action
     steps:
+      - name: Sleep for 30 seconds
+        run: sleep 30s
+        shell: bash
+    
       - name: Checkout
         uses: actions/checkout@v2
         
