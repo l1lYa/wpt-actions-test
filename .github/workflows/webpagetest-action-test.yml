@@ -18,7 +18,7 @@ jobs:
             https://adventures:polaris@adventures.polaris-test.run/our-outfitters/amk-adventures-outfitters/
             https://adventures:polaris@adventures.polaris-test.run/adventure/indysnowexp/
             https://adventures:polaris@adventures.polaris-test.run/search?locations=Minnesota,%20United%20States
-          label: 'GitHub Action Test'
+          label: 'WebPageTest TEST-env'
           budget: 'wpt-budget.json'
           wptOptions: 'wpt-options.json'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
