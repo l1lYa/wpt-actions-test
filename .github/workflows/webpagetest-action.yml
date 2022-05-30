@@ -1,3 +1,4 @@
+name: WebPageTest TEST-env
 on: [pull_request]
 
 jobs:
