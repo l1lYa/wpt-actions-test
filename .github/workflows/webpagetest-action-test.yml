@@ -3,6 +3,7 @@ on:
   workflow_run:
     workflows: ["Workflow Dispatch"]
     types: [completed] #requested
+  workflow_dispatch:
 
 jobs:
   build:
