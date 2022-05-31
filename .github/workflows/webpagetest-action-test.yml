@@ -1,5 +1,8 @@
 name: WebPageTest TEST-env
-on: workflow_dispatch 
+on:
+  workflow_run:
+    workflows: ["Workflow Dispatch"]
+    types: [completed] #requested
 
 jobs:
   build:
