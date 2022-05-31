@@ -2,6 +2,6 @@
     "runs": 1,
     "location": "ec2-us-east-1:Firefox",
     "connectivity": "Cable",
-    "blockAds": true
+    "blockAds": true,
     "emulateMobile": false,
 }
