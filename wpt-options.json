@@ -1,6 +1,6 @@
 {
     "runs": 1,
-    "location": "Dulles",
+    "location": "ec2-us-east-1",
     "connectivity": "4G",
     "blockAds": false,
     "emulateMobile": true
