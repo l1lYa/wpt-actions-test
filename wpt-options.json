@@ -1,6 +1,6 @@
 {
     "runs": 1,
-    "location": "LosAngeles_M1MacMini_CA",
+    "location": "LosAngeles_M1MacMini",
     "connectivity": "4G",
     "blockAds": false,
     "emulateMobile": true
