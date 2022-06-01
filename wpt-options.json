@@ -1,6 +1,6 @@
 {
     "runs": 1,
-    "location": "Dulles_Android",
+    "location": "Dulles",
     "connectivity": "4G",
     "blockAds": false,
     "emulateMobile": true
