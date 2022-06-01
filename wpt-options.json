@@ -1,7 +1,7 @@
 {
     "runs": 1,
-    "location": "gce-us-west3:Firefox",
-    "connectivity": "Cable",
-    "blockAds": true,
-    "emulateMobile": false
+    "location": "LosAngeles_M1MacMini_CA",
+    "connectivity": "4G",
+    "blockAds": false,
+    "emulateMobile": true
 }
