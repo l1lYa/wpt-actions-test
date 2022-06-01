@@ -1,6 +1,6 @@
 {
     "runs": 1,
-    "location": "gce-us-west3-catchpoint:Firefox",
+    "location": "gce-us-west3:Firefox",
     "connectivity": "Cable",
     "blockAds": true,
     "emulateMobile": false
