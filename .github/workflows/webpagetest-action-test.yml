@@ -19,9 +19,6 @@ jobs:
           apiKey: ${{ secrets.WPT_API_KEY }}
           urls: |
             https://adventures:polaris@adventures.polaris-test.run/
-            https://adventures:polaris@adventures.polaris-test.run/our-outfitters/amk-adventures-outfitters/
-            https://adventures:polaris@adventures.polaris-test.run/adventure/indysnowexp/
-            https://adventures:polaris@adventures.polaris-test.run/search?locations=Minnesota,%20United%20States
           label: 'WebPageTest TEST-env'
           budget: 'wpt-budget.json'
           wptOptions: 'wpt-options.json'
