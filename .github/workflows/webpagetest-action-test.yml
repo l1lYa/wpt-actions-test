@@ -22,5 +22,4 @@ jobs:
           label: 'WebPageTest TEST-env'
           budget: 'wpt-budget.json'
           wptOptions: 'wpt-options.json'
-          notifyEmail: 'ilyasokolov@marcatopartners.com'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
