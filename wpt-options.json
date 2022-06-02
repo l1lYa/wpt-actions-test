@@ -4,5 +4,6 @@
     "connectivity": "4G",
     "blockAds": false,
     "emulateMobile": true,
+    "timeout": 600,
     "notify": "ilya.onhigh@gmail.com"
 }
