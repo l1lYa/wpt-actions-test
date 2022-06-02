@@ -3,5 +3,6 @@
     "location": "ec2-us-east-1",
     "connectivity": "4G",
     "blockAds": false,
-    "emulateMobile": true
+    "emulateMobile": true,
+    "notify": "ilya.onhigh@gmail.com"
 }
