@@ -5,5 +5,5 @@
     "blockAds": false,
     "emulateMobile": true,
     "timeout": 600,
-    "notifyEmail": "ilyasokolov@marcatopartners.com"
+    "notify": "ilyasokolov@marcatopartners.com"
 }
