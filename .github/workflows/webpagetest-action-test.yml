@@ -12,23 +12,11 @@ jobs:
     steps:
 
 
-      - name: Get current time
-        uses: josStorer/get-current-time@v2.0.1
-        id: current-time
-        with:
-          format: YYYYMMDD-HH
-          utcOffset: "+08:00"
-      - name: Use current time
-        env:
-          TIME: "${{ steps.current-time.outputs.time }}"
-          R_TIME: "${{ steps.current-time.outputs.readableTime }}"
-          F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
-          YEAR: "${{ steps.current-time.outputs.year }}"
-          DAY: "${{ steps.current-time.outputs.day }}"
-        run: echo $TIME $R_TIME $F_TIME $YEAR $DAY
-
-
-
+      - name: Date Actions
+        # You may pin to the exact commit or the version.
+        # uses: ajilraju/actions-date@4cfac9163870601540ca713c4e51ba65d57e4a06
+        uses: ajilraju/actions-date@v0.1
+      
     
       - name: Checkout
         uses: actions/checkout@v2
@@ -39,7 +27,7 @@ jobs:
           apiKey: ${{ secrets.WPT_API_KEY }}
           urls: |
             https://adventures:polaris@adventures.polaris-test.run/
-          label: 'WebPageTest TEST-env $DAY ${{ steps.current-time.outputs.day }}'
+          label: 'WebPageTest TEST-env '
           budget: 'wpt-budget.json'
           wptOptions: 'wpt-options.json'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
