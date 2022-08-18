@@ -9,15 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: WebPageTest TEST-env
-    steps:
-
-
-      - name: Date Actions
-        # You may pin to the exact commit or the version.
-        # uses: ajilraju/actions-date@4cfac9163870601540ca713c4e51ba65d57e4a06
-        uses: ajilraju/actions-date@v0.1
-      
-    
+    steps:  
       - name: Checkout
         uses: actions/checkout@v2
         
