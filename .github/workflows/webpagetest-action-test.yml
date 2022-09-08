@@ -11,7 +11,7 @@ jobs:
     name: WebPageTest TEST-env
     steps:        
       - name: WebPageTest GitHub Action
-        uses: WPO-Foundation/webpagetest-github-action@v1.1.3
+        uses: WPO-Foundation/webpagetest-github-action@v1.1.2
 
 
 
@@ -20,4 +20,5 @@ jobs:
           urls: |
             https://adventures:polaris@adventures.polaris-test.run/
           label: 'WebPageTest TEST-env '
+          budget: '{ "median": {"firstView": {"firstContentfulPaint": 10000}}}'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
