@@ -11,7 +11,8 @@ jobs:
     name: WebPageTest TEST-env
     steps:        
       - name: WebPageTest GitHub Action
-        uses: WPO-Foundation/webpagetest-github-action@v1.0.0
+        uses: WPO-Foundation/webpagetest-github-action@v.1.0.0
+
 
         with:
           apiKey: ${{ secrets.WPT_API_KEY }}
