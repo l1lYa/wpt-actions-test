@@ -20,5 +20,4 @@ jobs:
           urls: |
             https://adventures:polaris@adventures.polaris-test.run/
           label: 'WebPageTest TEST-env '
-          budget: '{ "median": {"firstView": {"firstContentfulPaint": 10000}}}'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
