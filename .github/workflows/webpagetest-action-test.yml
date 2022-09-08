@@ -17,6 +17,4 @@ jobs:
           urls: |
             https://adventures:polaris@adventures.polaris-test.run/
           label: 'WebPageTest TEST-env '
-          budget: '../wpt-budget.json'
-          wptOptions: '../wpt-options.json'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
