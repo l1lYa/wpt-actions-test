@@ -11,10 +11,13 @@ jobs:
     name: WebPageTest TEST-env
     steps:        
       - name: WebPageTest GitHub Action
-        uses: WPO-Foundation/webpagetest-github-action@v1.1.2
+        uses: WPO-Foundation/webpagetest-github-action@v1.1.3
         with:
           apiKey: ${{ secrets.WPT_API_KEY }}
           urls: |
             https://adventures:polaris@adventures.polaris-test.run/
           label: 'WebPageTest TEST-env '
+          
+          budget: 'wpt-budget.json'
+          wptOptions: 'wpt-options.json'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
