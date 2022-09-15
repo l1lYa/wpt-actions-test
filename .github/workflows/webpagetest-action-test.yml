@@ -9,7 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: WebPageTest TEST-env
-    steps:        
+    steps:  
+      - name: Checkout
+        uses: actions/checkout@v2
+        
       - name: WebPageTest GitHub Action
         uses: WPO-Foundation/webpagetest-github-action@main
         with:
