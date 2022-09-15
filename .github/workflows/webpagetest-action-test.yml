@@ -19,6 +19,9 @@ jobs:
         run: echo $NOW
         env:
           NOW: ${{ steps.date.outputs.date }}
+      - uses: ajilraju/actions-date@v0.1
+        with:
+          args: date -d 1may '+%B %-d'
         
       - name: WebPageTest GitHub Action
         uses: WPO-Foundation/webpagetest-github-action@main
