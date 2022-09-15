@@ -4,8 +4,6 @@ on:
     workflows: ["Workflow Dispatch", "Workflow Dispatch 2"]
     types: [completed] #requested
   workflow_dispatch:
-env:
-  DATE: 'Th'
 
 jobs:
   build:
@@ -14,6 +12,8 @@ jobs:
     steps:  
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Set current date as env variable
+        run: echo "NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
         
       - name: WebPageTest GitHub Action
         uses: WPO-Foundation/webpagetest-github-action@main
@@ -21,7 +21,7 @@ jobs:
           apiKey: ${{ secrets.WPT_API_KEY }}
           urls: |
             https://adventures:polaris@adventures.polaris-test.run/
-          label: '$DATE TEST-env '
+          label: '$NOW TEST-env '
           budget: 'wpt-budget.json'
           wptOptions: 'wpt-options.json'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
