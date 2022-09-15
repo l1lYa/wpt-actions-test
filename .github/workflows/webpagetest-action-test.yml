@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2        
       - name: Get current date
         id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d, Time:%H-%M')"
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d, Time :%H-%M')"
       - name: Date display
         run: echo $NOW
         env:
@@ -25,7 +25,7 @@ jobs:
           apiKey: ${{ secrets.WPT_API_KEY }}
           urls: |
             https://adventures:polaris@adventures.polaris-test.run/
-          label: "${{env.NOW}} TEST-env"
+          label: "${{env.NOW}} TEST"
           budget: 'wpt-budget.json'
           wptOptions: 'wpt-options.json'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
