@@ -11,16 +11,14 @@ jobs:
     name: WebPageTest TEST-env
     steps:  
       - name: Checkout
-        uses: actions/checkout@v2
-        
+        uses: actions/checkout@v2        
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-      - name: Test with environment variables
+      - name: Date display
         run: echo $NOW
         env:
-          NOW: ${{ steps.date.outputs.date }}
-        
+          NOW: ${{ steps.date.outputs.date }}        
       - name: WebPageTest GitHub Action
         uses: WPO-Foundation/webpagetest-github-action@main
         with:
