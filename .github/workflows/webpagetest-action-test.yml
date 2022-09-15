@@ -12,6 +12,7 @@ jobs:
     steps:  
       - name: Checkout
         uses: actions/checkout@v2
+        
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
@@ -19,9 +20,6 @@ jobs:
         run: echo $NOW
         env:
           NOW: ${{ steps.date.outputs.date }}
-      - uses: ajilraju/actions-date@v0.1
-        with:
-          args: date -d 1may '+%B %-d'
         
       - name: WebPageTest GitHub Action
         uses: WPO-Foundation/webpagetest-github-action@main
@@ -29,7 +27,7 @@ jobs:
           apiKey: ${{ secrets.WPT_API_KEY }}
           urls: |
             https://adventures:polaris@adventures.polaris-test.run/
-          label: $NOW
+          label: ${{env.NOW}}
           budget: 'wpt-budget.json'
           wptOptions: 'wpt-options.json'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
