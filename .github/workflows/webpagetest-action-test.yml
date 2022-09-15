@@ -12,8 +12,12 @@ jobs:
     steps:  
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Set current date as env variable
-        run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+      - name: Get current date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      - name: Test with environment variables
+        run: echo $NOW
+        env:
+          NOW: ${{ steps.date.outputs.date }}
         
       - name: WebPageTest GitHub Action
         uses: WPO-Foundation/webpagetest-github-action@main
