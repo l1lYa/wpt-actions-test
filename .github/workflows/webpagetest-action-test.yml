@@ -26,7 +26,7 @@ jobs:
           apiKey: ${{ secrets.WPT_API_KEY }}
           urls: |
             https://adventures:polaris@adventures.polaris-test.run/
-          label: '$NOW TEST-env '
+          label: $NOW
           budget: 'wpt-budget.json'
           wptOptions: 'wpt-options.json'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
