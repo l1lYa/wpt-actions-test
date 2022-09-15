@@ -4,6 +4,8 @@ on:
     workflows: ["Workflow Dispatch", "Workflow Dispatch 2"]
     types: [completed] #requested
   workflow_dispatch:
+env:
+  DATE: 'Th'
 
 jobs:
   build:
@@ -19,7 +21,7 @@ jobs:
           apiKey: ${{ secrets.WPT_API_KEY }}
           urls: |
             https://adventures:polaris@adventures.polaris-test.run/
-          label: 'WebPageTest TEST-env '
+          label: '$DATE TEST-env '
           budget: 'wpt-budget.json'
           wptOptions: 'wpt-options.json'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
