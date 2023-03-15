@@ -1,0 +1,9 @@
+{
+    "runs": 1,
+    "location": "ec2-us-east-1-bos",
+    "connectivity": "cable",
+    "blockAds": false,
+    "emulateMobile": false,
+    "timeout": 1800,
+    "notifyEmail": "ilyasokolov@marcatopartners.com"
+}
