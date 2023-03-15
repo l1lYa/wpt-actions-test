@@ -1,0 +1,31 @@
+name: WebPageTest TEST-env
+on:
+  workflow_run:
+    workflows: ["Workflow Dispatch", "Workflow Dispatch 2"]
+    types: [completed] #requested
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: WebPageTest TEST-env
+    steps:  
+      - name: Checkout
+        uses: actions/checkout@v2        
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d, Time :%H-%M')"
+        env:
+          NOW: ${{ steps.date.outputs.date }}        
+      - name: WebPageTest GitHub Action
+        uses: WPO-Foundation/webpagetest-github-action@main
+        with:
+          apiKey: ${{ secrets.WPT_API_KEY }}
+          urls: |
+            https://adventures:polaris@adventures.polaris-test.run/
+          label: "${{env.NOW}} TEST-env DESK"
+          budget: 'wpt-budget.json'
+          wptOptions: 'wpt-options2.json'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NOW: ${{ steps.date.outputs.date }}
