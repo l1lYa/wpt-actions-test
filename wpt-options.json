@@ -4,6 +4,6 @@
     "connectivity": "4G",
     "blockAds": false,
     "emulateMobile": true,
-    "timeout": 600,
+    "timeout": 1800,
     "notifyEmail": "ilyasokolov@marcatopartners.com"
 }
