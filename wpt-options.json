@@ -1,6 +1,6 @@
 {
     "runs": 1,
-    "location": "ec2-us-east-1-dfw",
+    "location": "gce-us-west3",
     "connectivity": "4G",
     "blockAds": false,
     "emulateMobile": true,
